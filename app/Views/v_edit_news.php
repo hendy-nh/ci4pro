@@ -11,10 +11,10 @@
 <body>
     <div class="col-lg-6" style="float:none;margin:auto;">
 
-        <form action="<?= base_url('edit_news') ?>" method="POST" enctype="multipart/form-data">
+        <form action="<?= base_url('update_news/' . $id_news['id_news']) ?>" method="POST" enctype="multipart/form-data">
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Penulis</label>
-                <input value="<?php echo $detail->penulis ?>" type="text" name="penulis" class="form-control">
+                <input value="<?php echo $id_news['penulis'] ?>" type="text" name="penulis" class="form-control">
 
             </div>
             <!-- <div class="mb-3">
@@ -23,14 +23,14 @@
         </div> -->
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Content</label>
-                <input value="<?php echo $detail->content_news ?>" type=" text" name="content" class="form-control">
+                <input value="<?php echo $id_news['content_news'] ?>" type=" text" name="content" class="form-control">
             </div>
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Image</label>
-                <!-- <img src="<?= base_url('image/' . $detail->image)  ?>"> -->
+                <img src="<?= base_url('image/' . $id_news['image'])  ?>" width="100px" height="100px">
                 <div class="col-lg-6">
 
-                    <input value="<?php echo $detail->image ?>" type="text" name="image" class="form-control">
+                    <input value="<?php echo $id_news['image'] ?>" type="file" name="image" class="form-control">
                 </div>
             </div>
 

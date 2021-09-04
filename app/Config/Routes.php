@@ -39,7 +39,17 @@ $routes->get('user', 'User::view_user');
 $routes->get('insert_news', 'News::insert');
 $routes->post('insert_news_data', 'News::insert_news_data');
 $routes->get('delete_news/(:any)', 'News::delete_news/$1');
-$routes->get('detail_news/(:any)', 'News::detail_news/$1');
+$routes->get('detail_news/(:any)', 'Front::detail_news/$1');
+$routes->get('detail_news_1/(:any)', 'Home::detail_news/$1');
+$routes->get('admin', 'Admin::index');
+$routes->get('admin_news', 'Admin::view_news');
+$routes->post('admin_news_insert', 'Admin::insert_news_data');
+$routes->get('news_add', 'Admin::news_add');
+$routes->get('admin_delete_news/(:any)', 'Admin::delete_news/$1');
+$routes->get('admin_detail_news/(:any)', 'Admin::detail_news/$1');
+$routes->post('admin_update_news/(:any)', 'Admin::update_news/$1');
+$routes->get('detail_news_1/(:any)', 'Front::detail_news/$1');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
